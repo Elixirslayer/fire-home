@@ -1,101 +1,82 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import { SiteData } from "./models/SiteData";
+import SiteComponent from "./components/SiteComponent";
+import Firefox from "./components/Firefox";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    const [sites, setSites] = useState<SiteData[]>([]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    useEffect(() => {
+        const sites: SiteData[] = [
+            {
+                ImageUrl: "/images/gitlab-logo-500.png",
+                Title: "Gitlab",
+				RedirectUrl: "https://gitlab.com/"
+            },
+			{
+                ImageUrl: "/images/Amplify.png",
+                Title: "Amplify",
+				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/amplify/apps"
+            },
+			{
+                ImageUrl: "/images/DynamoDB.png",
+                Title: "DynamoDB",
+				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/dynamodbv2/home?region=ap-south-1#dashboard"
+            },
+			{
+                ImageUrl: "/images/SimpleStorageService.png",
+                Title: "S3 Bucket",
+				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/s3/home?region=ap-south-1#"
+            },
+			{
+                ImageUrl: "/images/jenkins.png",
+                Title: "Jenkins",
+				RedirectUrl: "http://jenkins-dev.api.zentrumhub.com:8080/jenkins/",
+            },
+			{
+                ImageUrl: "/images/elasticsearch.png",
+                Title: "Kibana Logs",
+				RedirectUrl: "https://logs.us.prod.zentrumhub.com/app/discover#/view/c30375c0-e8b2-11ed-992b-43a80f092509"
+            },
+			{
+                ImageUrl: "/images/youtube.png",
+                Title: "Youtube",
+				RedirectUrl: "https://youtube.com",
+				Height: 150,
+				Width: 224
+            },
+			{
+                ImageUrl: "/images/youtube-music.png",
+                Title: "Youtube Music",
+				RedirectUrl: "https://music.youtube.com",
+            },
+			{
+                ImageUrl: "/images/github-mark-white.png",
+                Title: "GitHub",
+				RedirectUrl: "https://github.com",
+            },
+        ];
+
+        setSites(sites);
+    }, []);
+    return (
+        <>
+            <div className="w-full flex flex-col items-center p-8">
+				<div className="m-2 mb-16">
+					<Firefox></Firefox>
+				</div>
+                <div className="flex max-w-screen-2xl flex-wrap justify-center">
+                    {sites.map((site) => {
+                        return (
+                            <div key={site.Title} className="m-4">
+                                <SiteComponent siteData={site}></SiteComponent>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </>
+    );
 }
