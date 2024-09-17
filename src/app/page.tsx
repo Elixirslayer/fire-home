@@ -15,6 +15,16 @@ export default function Home() {
                 Title: "Gitlab",
 				RedirectUrl: "https://gitlab.com/"
             },
+            {
+                ImageUrl: "/images/jira.png",
+                Title: "Jira",
+				RedirectUrl: "https://zentrumhub.atlassian.net/jira/software/c/projects/NEX/boards/1"
+            },
+            {
+                ImageUrl: "/images/slack.png",
+                Title: "Slack",
+				RedirectUrl: "https://app.slack.com/client/T02MPHCTU21/C02NG7KGUHW"
+            },
 			{
                 ImageUrl: "/images/Amplify.png",
                 Title: "Amplify",
