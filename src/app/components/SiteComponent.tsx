@@ -5,6 +5,9 @@ function SiteComponent({siteData}: {siteData :SiteData}) {
     const isGhDeployment: boolean = process.env.NODE_ENV === "production";
     const basePath: string = process.env.basePath || "";
     function redirect(){
+        console.log(isGhDeployment);
+        console.log(basePath);
+        console.log(process.env.NODE_ENV);        
         window.open(siteData.RedirectUrl, '_blank');
     }
     return ( 
