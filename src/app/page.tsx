@@ -11,6 +11,11 @@ export default function Home() {
     useEffect(() => {
         const sites: SiteData[] = [
             {
+                ImageUrl: "/images/chatgpt.png",
+                Title: "ChatGPT",
+				RedirectUrl: "https://chatgpt.com/"
+            },
+            {
                 ImageUrl: "/images/gitlab-logo-500.png",
                 Title: "Gitlab",
 				RedirectUrl: "https://gitlab.com/"
