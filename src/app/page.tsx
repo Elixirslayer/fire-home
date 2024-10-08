@@ -48,7 +48,7 @@ export default function Home() {
 			{
                 ImageUrl: "/images/jenkins.png",
                 Title: "Jenkins",
-				RedirectUrl: "http://jenkins-dev.api.zentrumhub.com:8080/jenkins/",
+				RedirectUrl: "http://jenkins-dev.api.zentrumhub.com",
             },
 			{
                 ImageUrl: "/images/elasticsearch.png",
