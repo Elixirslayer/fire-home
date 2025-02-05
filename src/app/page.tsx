@@ -1,87 +1,61 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SiteData } from "./models/SiteData";
 import SiteComponent from "./components/SiteComponent";
 import Firefox from "./components/Firefox";
+import { repoBasePath, sites } from "./Constants";
 
 export default function Home() {
-    const [sites, setSites] = useState<SiteData[]>([]);
+    const isGhDeployment: boolean = process.env.NODE_ENV === "production";
+    const basePath: string = repoBasePath;
 
-    useEffect(() => {
-        const sites: SiteData[] = [
-            {
-                ImageUrl: "/images/chatgpt.png",
-                Title: "ChatGPT",
-				RedirectUrl: "https://chatgpt.com/"
-            },
-            {
-                ImageUrl: "/images/gitlab-logo-500.png",
-                Title: "Gitlab",
-				RedirectUrl: "https://gitlab.com/"
-            },
-            {
-                ImageUrl: "/images/jira.png",
-                Title: "Jira",
-				RedirectUrl: "https://zentrumhub.atlassian.net/jira/software/c/projects/NEX/boards/1"
-            },
-            {
-                ImageUrl: "/images/slack.png",
-                Title: "Slack",
-				RedirectUrl: "https://app.slack.com/client/T02MPHCTU21/C02NG7KGUHW"
-            },
-			{
-                ImageUrl: "/images/Amplify.png",
-                Title: "Amplify",
-				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/amplify/apps"
-            },
-			{
-                ImageUrl: "/images/DynamoDB.png",
-                Title: "DynamoDB",
-				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/dynamodbv2/home?region=ap-south-1#dashboard"
-            },
-			{
-                ImageUrl: "/images/SimpleStorageService.png",
-                Title: "S3 Bucket",
-				RedirectUrl: "https://ap-south-1.console.aws.amazon.com/s3/home?region=ap-south-1#"
-            },
-			{
-                ImageUrl: "/images/jenkins.png",
-                Title: "Jenkins",
-				RedirectUrl: "http://jenkins-dev.api.zentrumhub.com",
-            },
-			{
-                ImageUrl: "/images/elasticsearch.png",
-                Title: "Kibana Logs",
-				RedirectUrl: "https://logs.us.prod.zentrumhub.com/app/discover#/view/c30375c0-e8b2-11ed-992b-43a80f092509"
-            },
-			{
-                ImageUrl: "/images/youtube.png",
-                Title: "Youtube",
-				RedirectUrl: "https://youtube.com",
-				Height: 150,
-				Width: 224
-            },
-			{
-                ImageUrl: "/images/youtube-music.png",
-                Title: "Youtube Music",
-				RedirectUrl: "https://music.youtube.com",
-            },
-			{
-                ImageUrl: "/images/github-mark-white.png",
-                Title: "GitHub",
-				RedirectUrl: "https://github.com",
-            },
-        ];
+    const [isAnime, setIsAnime] = useState<boolean>(false);
+    const [translateX, setTranslateX] = useState<string>("0px");
+    // const [buttonImage, setButtonImage] = useState("");
 
-        setSites(sites);
-    }, []);
+    // function getButtonImage(): string{
+    //     // const imageBaseUrl: string = "/images/ichigo.png";
+    //     // console.log("here");
+        
+    //     // if(isGhDeployment){
+    //     //     console.log(`bg-[url('${basePath + imageBaseUrl}')]`);
+    //     //     return `bg-[url('${basePath + imageBaseUrl}')]`;
+    //     // }
+    //     // console.log(`bg-[url('${imageBaseUrl}')]`);
+    //     // return `bg-[url('${imageBaseUrl}')]`;
+
+    //     return "/images/ichigo.png";
+    // }
+
+
+    function changeTheme() {
+        console.log(!isAnime ? "2.5rem" : "0px");
+        setTranslateX(!isAnime ? "2.5rem" : "0px");
+        setIsAnime(!isAnime);
+    }
+
+    // useEffect(()=>{
+    //     setButtonImage(getButtonImage());
+    // }, [])
+
     return (
         <>
             <div className="w-full flex flex-col items-center p-8">
-				<div className="m-2 mb-16">
-					<Firefox></Firefox>
-				</div>
+                <div className="m-2 mb-16 w-full flex justify-evenly">
+                    <div className="w-1/3"></div>
+
+                    <div className="w-1/3 flex justify-center">
+                        <Firefox></Firefox>
+                    </div>
+
+                    <div className="flex w-1/3 items-center justify-end px-12">
+                        <button className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem]" onClick={changeTheme}>
+                            <div className={`rounded-[5rem] w-10 h-10 transition-all duration-150 `} style={{ transform: `translateX(${translateX})` }}>
+
+                            </div>
+                        </button>
+                    </div>
+                </div>
                 <div className="flex max-w-screen-2xl flex-wrap justify-center">
                     {sites.map((site) => {
                         return (

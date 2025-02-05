@@ -2,7 +2,6 @@
 import { SiteData } from "@/app/models/SiteData";
 import Image from "next/image";
 import { repoBasePath } from "../Constants";
-import { useEffect } from "react";
 
 function SiteComponent({siteData}: {siteData :SiteData}) {
     const isGhDeployment: boolean = process.env.NODE_ENV === "production";
@@ -10,10 +9,6 @@ function SiteComponent({siteData}: {siteData :SiteData}) {
     function redirect(){      
         window.open(siteData.RedirectUrl, '_blank');
     }
-
-    useEffect(()=>{
-        console.log(((isGhDeployment ? basePath : "") + siteData.ImageUrl));
-    }, [isGhDeployment, basePath, siteData.ImageUrl])
 
     return ( 
         <>

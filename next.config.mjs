@@ -4,7 +4,7 @@ const nextConfig = {
     images: {
         unoptimized: true
     },
-    basePath: "/fire-home",
+    // basePath: "/fire-home",
 };
 
 export default nextConfig;
