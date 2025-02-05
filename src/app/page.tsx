@@ -26,7 +26,7 @@ export default function Home() {
 
     function getBackgroundImage(): string {
         if (isGhDeployment)
-            return "bg-[url(/fire-home/images/ichigo.jpg)]";
+            return "bg-[url(/fire-home/images/gotei-4k.jpg)]";
         return "bg-[url(/images/gotei-4k.jpg)]";
     }
 
