@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react";
 import SiteComponent from "./components/SiteComponent";
 import Firefox from "./components/Firefox";
-import { repoBasePath, sites } from "./Constants";
+import { sites } from "./Constants";
 
 export default function Home() {
     const [isAnime, setIsAnime] = useState<boolean>(false);
     const [translateX, setTranslateX] = useState<string>("0px");
     const isGhDeployment: boolean = process.env.NODE_ENV === "production";
-    const basePath: string = repoBasePath;
     const buttonImage = getSliderImage();
     const backgroundImage = getBackgroundImage();
 
@@ -20,16 +19,14 @@ export default function Home() {
     }
 
     function getSliderImage(): string {
-        const imageUrl = "/images/ichigo.jpg";
         if (isGhDeployment)
-            return `bg-[url(${basePath + imageUrl})]`;
+            return "bg-[url(/fire-home/images/ichigo.jpg)]";
         return "bg-[url(/images/ichigo.jpg)]";
     }
 
     function getBackgroundImage(): string {
-        const imageUrl = "/images/gotei-4k.jpg";
         if (isGhDeployment)
-            return `bg-[url(${basePath + imageUrl})]`;
+            return "bg-[url(/fire-home/images/ichigo.jpg)]";
         return "bg-[url(/images/gotei-4k.jpg)]";
     }
 
