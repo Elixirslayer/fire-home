@@ -13,9 +13,9 @@ export default function Home() {
     useEffect(() => {
         const sites: SiteData[] = [
             {
-                ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
-                Title: "WhatsApp",
-				RedirectUrl: "https://web.whatsapp.com/"
+                ImageUrl: "/images/DeepSeek_logo_icon-3185189800.png",
+                Title: "DeepSeek",
+				RedirectUrl: "https://chat.deepseek.com/"
             },            
             {
                 ImageUrl: "/images/physics-wallah-seeklogo.svg",
