@@ -44,7 +44,7 @@ export const sites = [
   {
     ImageUrl: "/images/elasticsearch.png",
     Title: "Kibana Logs",
-    RedirectUrl: "https://logs.us.prod.zentrumhub.com/app/discover#/view/54b3dd20-d966-11ef-9bf7-b7188277e36a"
+    RedirectUrl: "https://nexus-logs.prod.zentrumhub.com/app/discover#/view/54b3dd20-d966-11ef-9bf7-b7188277e36a"
   },
   {
     ImageUrl: "/images/youtube.png",
