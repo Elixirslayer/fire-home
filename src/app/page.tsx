@@ -34,13 +34,14 @@ export default function Home() {
 				Height: 150,
 				Width: 224
             },
-             {
+            {
                 ImageUrl: "/images/telegram.png",
                 Title: "Telegram",
 				RedirectUrl: "https://web.telegram.org",
 				Height: 150,
 				Width: 224
-            }           {
+            },
+            {
                 ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
                 Title: "WhatsApp",
 				RedirectUrl: "https://web.whatsapp.com",
