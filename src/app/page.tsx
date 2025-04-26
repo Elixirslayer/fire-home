@@ -27,13 +27,6 @@ export default function Home() {
                 Title: "ChatGPT",
 				RedirectUrl: "https://chatgpt.com/"
             },
-			{
-                ImageUrl: "/images/youtube.png",
-                Title: "Youtube",
-				RedirectUrl: "https://youtube.com",
-				Height: 150,
-				Width: 224
-            },
             {
                 ImageUrl: "/images/github.png",
                 Title: "Github",
@@ -41,10 +34,16 @@ export default function Home() {
 				Height: 150,
 				Width: 224
             },
-            {
+             {
                 ImageUrl: "/images/telegram.png",
                 Title: "Telegram",
 				RedirectUrl: "https://web.telegram.org",
+				Height: 150,
+				Width: 224
+            }           {
+                ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
+                Title: "WhatsApp",
+				RedirectUrl: "https://web.whatsapp.com",
 				Height: 150,
 				Width: 224
             },
