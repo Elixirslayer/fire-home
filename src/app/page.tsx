@@ -42,9 +42,9 @@ export default function Home() {
 				Width: 224
             },
             {
-                ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
-                Title: "WhatsApp",
-				RedirectUrl: "https://web.whatsapp.com",
+                ImageUrl: "/images/youtube.png",
+                Title: "YouTube",
+				RedirectUrl: "https://youtube.com",
 				Height: 150,
 				Width: 224
             },
