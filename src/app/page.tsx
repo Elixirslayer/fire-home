@@ -41,13 +41,6 @@ export default function Home() {
 				Height: 150,
 				Width: 224
             },
-            {
-                ImageUrl: "/images/youtube.png",
-                Title: "YouTube",
-				RedirectUrl: "https://youtube.com",
-				Height: 150,
-				Width: 224
-            },
        ];
 
         setSites(sites);
