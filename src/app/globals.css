@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
+  --background: #1c1c1c;
   --foreground: #ededed;
 }
 
@@ -17,4 +17,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* primereact overrides */
+
+.p-dialog > .p-dialog-header, .p-dialog-content{
+  background-color: var(--background);
 }

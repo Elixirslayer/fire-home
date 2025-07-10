@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { repoBasePath } from "../Constants";
+import { repoBasePath } from "../constants/Constants";
 
 function Firefox() {
     const isGhDeployment: boolean = process.env.NODE_ENV === "production";

@@ -1,6 +1,4 @@
-import { SiteData } from "./models/SiteData";
-
-export const repoBasePath: string = "/fire-home";
+import { SiteData } from "../models/SiteData";
 
 export const sites: SiteData[] = [
 	{

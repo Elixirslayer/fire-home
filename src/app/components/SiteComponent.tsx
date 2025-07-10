@@ -1,7 +1,7 @@
 'use client'
 import { SiteData } from "@/app/models/SiteData";
 import Image from "next/image";
-import { repoBasePath } from "../Constants";
+import { repoBasePath } from "../constants/Constants";
 import Link from "next/link";
 
 function SiteComponent({ siteData }: { siteData: SiteData }) {
