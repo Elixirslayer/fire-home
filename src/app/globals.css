@@ -24,3 +24,13 @@ body {
 .p-dialog > .p-dialog-header, .p-dialog-content{
   background-color: var(--background);
 }
+
+.p-dialog > .p-dialog-header{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.p-dialog > .p-dialog-content{
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
