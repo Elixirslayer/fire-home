@@ -11,6 +11,7 @@ import { sites } from "./constants/SiteDataConstants";
 
 export default function Home() {
 	const [currentView, setCurrentView] = useState<ViewType>("shortcuts");
+	const [minScreenHeight, setMinScreenHeight] = useState<number>(0);
 	const [isAnime, setIsAnime] = useState<boolean>(false);
 	const [translateX, setTranslateX] = useState<string>("0px");
 	const isGhDeployment: boolean = process.env.NODE_ENV === "production";
@@ -38,6 +39,16 @@ export default function Home() {
 		setCurrentView(view);
 	}
 
+	function monitorMinScreenSize(){
+		const div = document.getElementById('content-div');
+    if (div) {
+      const height = div.offsetHeight;
+      if(height > minScreenHeight){
+				setMinScreenHeight(height);
+			}
+    }
+	}
+
 	useEffect(() => {
 		const persistThemeStr = localStorage.getItem("isAnime");
 		if (persistThemeStr) {
@@ -53,6 +64,8 @@ export default function Home() {
 			}
 		}
 	}, []);
+
+	useEffect(monitorMinScreenSize, [currentView])
 
 	return (
 		<div className={`w-full flex flex-col items-center p-8 bg-cover bg-center ${isAnime ? backgroundImage : "bg-black"}`}>
@@ -78,7 +91,7 @@ export default function Home() {
 					</button>
 				</div>
 			</div>
-			<div className="flex max-w-screen-2xl min-h-svh flex-wrap justify-center">
+			<div id="content-div" className="flex max-w-screen-2xl min-h-svh flex-wrap justify-center" style={{height: minScreenHeight}}>
 				{currentView == "shortcuts" &&
 					sites.map((site) => {
 						return (
