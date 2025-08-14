@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
+    // output: "export",
     images: {
-        unoptimized: true
+        // unoptimized: false
     },
-    basePath: "/fire-home",
+    basePath: "/fire-home"
 };
 
 export default nextConfig;

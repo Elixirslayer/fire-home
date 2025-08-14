@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import SiteComponent from "./components/SiteComponent";
-import Firefox from "./components/Firefox";
 import { repoBasePath } from "./constants/Constants";
 import { ViewType } from "./models/ViewType";
 import ToolsWrapper from "./components/ToolsWrapper";
@@ -80,18 +79,13 @@ export default function Home() {
 						</button>
 					</div>
 				</div>
-
-				<div className="w-1/3 flex justify-center">
-					<Firefox></Firefox>
-				</div>
-
 				<div className="flex w-1/3 items-center justify-end px-12">
 					<button className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem]" onClick={changeTheme}>
 						<div className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${isAnime ? buttonImage : "bg-black"}`} style={{ transform: `translateX(${translateX})` }}></div>
 					</button>
 				</div>
 			</div>
-			<div id="content-div" className="flex max-w-screen-2xl min-h-svh flex-wrap justify-center" style={{height: minScreenHeight}}>
+			<div id="content-div" className="flex max-w-screen-2xl min-h-svh flex-wrap justify-center">
 				{currentView == "shortcuts" &&
 					sites.map((site) => {
 						return (
