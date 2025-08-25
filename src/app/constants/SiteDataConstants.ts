@@ -38,16 +38,21 @@ export const sites: SiteData[] = [
             {
                 ImageUrl: "/images/searxng.png",
                 Title: "SearXNG",
-				RedirectUrl: "https://archop.duckdns.org/searxng"
+				RedirectUrl: "https://archop.giize.com/searxng"
             },
             {
                 ImageUrl: "/images/komga.png",
                 Title: "Komga",
-				RedirectUrl: "https://archop.duckdns.org/komga"
+				RedirectUrl: "https://archop.giize.com/komga"
             },
             {
                 ImageUrl: "/images/jellyfin.png",
                 Title: "Jellyfin",
-				RedirectUrl: "https://archop.duckdns.org/jellyfin/web/#/home.html"
+				RedirectUrl: "https://archop.giize.com/jellyfin/web/#/home.html"
+            },
+            {
+                ImageUrl: "/images/transmission.png",
+                Title: "Transmission",
+				RedirectUrl: "https://archop.giize.com/transmission"
             }
 ];
