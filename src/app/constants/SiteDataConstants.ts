@@ -41,9 +41,9 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/searxng"
             },
             {
-                ImageUrl: "/images/komga.png",
-                Title: "Komga",
-				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/komga"
+                ImageUrl: "/images/kavita.png",
+                Title: "Kavita",
+				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/kavita"
             },
             {
                 ImageUrl: "/images/jellyfin.png",
