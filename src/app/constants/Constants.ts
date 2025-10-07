@@ -1,1 +1,1 @@
-export const repoBasePath: string = "/fire-home";
+// declare constants here -

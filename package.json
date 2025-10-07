@@ -12,7 +12,7 @@
   "dependencies": {
     "fire-home": "file:",
     "gh-pages": "^6.1.1",
-    "next": "14.2.11",
+    "next": "^14.2.33",
     "primereact": "^10.9.6",
     "react": "^18",
     "react-dom": "^18",
