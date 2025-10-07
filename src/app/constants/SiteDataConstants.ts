@@ -38,21 +38,21 @@ export const sites: SiteData[] = [
             {
                 ImageUrl: "/images/searxng.png",
                 Title: "SearXNG",
-				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/searxng"
+				RedirectUrl: "https://bankaitab.space/searxng"
             },
             {
                 ImageUrl: "/images/kavita.png",
                 Title: "Kavita",
-				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/kavita"
+				RedirectUrl: "https://bankaitab.space/kavita"
             },
             {
                 ImageUrl: "/images/jellyfin.png",
                 Title: "Jellyfin",
-				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/jellyfin/web/#/home.html"
+				RedirectUrl: "https://bankaitab.space/jellyfin/web/#/home.html"
             },
             {
                 ImageUrl: "/images/transmission.png",
                 Title: "Transmission",
-				RedirectUrl: "https://gentoo.scaptonyx-gray.ts.net/transmission"
+				RedirectUrl: "http://localhost:9091"
             }
 ];
