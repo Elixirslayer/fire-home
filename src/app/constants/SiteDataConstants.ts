@@ -12,9 +12,9 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://pw.live/"
             },            
             {
-                ImageUrl: "/images/chatgpt.png",
-                Title: "ChatGPT",
-				RedirectUrl: "https://chatgpt.com/"
+                ImageUrl: "/images/arratai.png",
+                Title: "Arratai",
+				RedirectUrl: "https://web.arattai.in/"
             },
             {
                 ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
@@ -51,8 +51,13 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://bankaitab.space/jellyfin/web/#/home.html"
             },
             {
-                ImageUrl: "/images/transmission.png",
-                Title: "Transmission",
-				RedirectUrl: "http://localhost:9091"
+                ImageUrl: "/images/qbt.png",
+                Title: "qBittorrent",
+				RedirectUrl: "http://localhost:8084"
+            },
+            {
+                ImageUrl: "/images/music.png",
+                Title: "lms",
+				RedirectUrl: "https://bankaitab.space/lms/"
             }
 ];
