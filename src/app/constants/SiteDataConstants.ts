@@ -41,11 +41,6 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://bankaitab.space/searxng"
             },
             {
-                ImageUrl: "/images/kavita.png",
-                Title: "Kavita",
-				RedirectUrl: "https://bankaitab.space/kavita"
-            },
-            {
                 ImageUrl: "/images/jellyfin.png",
                 Title: "Jellyfin",
 				RedirectUrl: "https://bankaitab.space/jellyfin/web/#/home.html"
