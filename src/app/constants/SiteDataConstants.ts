@@ -54,10 +54,5 @@ export const sites: SiteData[] = [
                 ImageUrl: "/images/qbt.png",
                 Title: "qBittorrent",
 				RedirectUrl: "http://localhost:8084"
-            },
-            {
-                ImageUrl: "/images/music.png",
-                Title: "lms",
-				RedirectUrl: "https://bankaitab.space/lms/"
             }
 ];
