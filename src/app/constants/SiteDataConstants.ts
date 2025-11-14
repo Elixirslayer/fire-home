@@ -2,14 +2,14 @@ import { SiteData } from "../models/SiteData";
 
 export const sites: SiteData[] = [
             {
+                ImageUrl: "/images/soulseek.png",
+                Title: "SoulSeek",
+				RedirectUrl: "https://bankaitab.space/slsk/"
+            },            
+            {
                 ImageUrl: "/images/DeepSeek_logo_icon-3185189800.png",
                 Title: "DeepSeek",
 				RedirectUrl: "https://chat.deepseek.com/"
-            },            
-            {
-                ImageUrl: "/images/physics-wallah-seeklogo.svg",
-                Title: "PhysicsWallah",
-				RedirectUrl: "https://pw.live/"
             },            
             {
                 ImageUrl: "/images/arratai.png",
@@ -22,16 +22,16 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://web.whatsapp.com/"
             },
             {
-                ImageUrl: "/images/github-mark-white.png",
-                Title: "Github",
-				RedirectUrl: "https://github.com",
+                ImageUrl: "/images/telegram.png",
+                Title: "Telegram",
+				RedirectUrl: "https://web.telegram.org",
 				Height: 150,
 				Width: 224
             },
             {
-                ImageUrl: "/images/telegram.png",
-                Title: "Telegram",
-				RedirectUrl: "https://web.telegram.org",
+                ImageUrl: "/images/gitlab.png",
+                Title: "GitLab",
+				RedirectUrl: "https://gitlab.com",
 				Height: 150,
 				Width: 224
             },
@@ -49,5 +49,20 @@ export const sites: SiteData[] = [
                 ImageUrl: "/images/qbt.png",
                 Title: "qBittorrent",
 				RedirectUrl: "http://localhost:8084"
-            }
+            },
+            {
+                ImageUrl: "/images/abs.png",
+                Title: "AudioBookShelf",
+				RedirectUrl: "https://abs.bankaitab.space"
+            },
+            {
+                ImageUrl: "/images/copyparty.svg",
+                Title: "CopyParty",
+				RedirectUrl: "https://copyparty.bankaitab.space"
+            },
+            {
+                ImageUrl: "/images/Miniflux.png",
+                Title: "Miniflux",
+				RedirectUrl: "https://bankaitab.space/rss"
+            },
 ];
