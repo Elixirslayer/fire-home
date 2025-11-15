@@ -7,9 +7,9 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://bankaitab.space/slsk/"
             },            
             {
-                ImageUrl: "/images/DeepSeek_logo_icon-3185189800.png",
-                Title: "DeepSeek",
-				RedirectUrl: "https://chat.deepseek.com/"
+                ImageUrl: "/images/kuma.svg",
+                Title: "Uptime Kuma",
+				RedirectUrl: "https://kuma.bankaitab.space/"
             },            
             {
                 ImageUrl: "/images/arratai.png",
@@ -17,14 +17,14 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://web.arattai.in/"
             },
             {
-                ImageUrl: "/images/WhatsApp-PNG-Picture-3892070548.png",
-                Title: "WhatsApp",
-				RedirectUrl: "https://web.whatsapp.com/"
+                ImageUrl: "/images/jellyseerr.svg",
+                Title: "Jellyseerr",
+				RedirectUrl: "https://jsr.bankaitab.space/"
             },
             {
-                ImageUrl: "/images/telegram.png",
-                Title: "Telegram",
-				RedirectUrl: "https://web.telegram.org",
+                ImageUrl: "/images/gotify.png",
+                Title: "Gotify",
+				RedirectUrl: "https://bankaitab.space/gotify/",
 				Height: 150,
 				Width: 224
             },
