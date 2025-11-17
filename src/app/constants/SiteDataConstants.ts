@@ -12,9 +12,9 @@ export const sites: SiteData[] = [
 				RedirectUrl: "https://kuma.bankaitab.space/"
             },            
             {
-                ImageUrl: "/images/arratai.png",
-                Title: "Arratai",
-				RedirectUrl: "https://web.arattai.in/"
+                ImageUrl: "/images/komga.png",
+                Title: "Komga",
+				RedirectUrl: "https://bankaitab.space/komga/"
             },
             {
                 ImageUrl: "/images/jellyseerr.svg",
@@ -48,7 +48,7 @@ export const sites: SiteData[] = [
             {
                 ImageUrl: "/images/qbt.png",
                 Title: "qBittorrent",
-				RedirectUrl: "http://localhost:8084"
+				RedirectUrl: "http://bankaitab.space/qbt"
             },
             {
                 ImageUrl: "/images/abs.png",
