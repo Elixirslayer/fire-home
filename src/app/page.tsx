@@ -100,24 +100,32 @@ export default function Home() {
 		<button onClick={() => changeCurrentView("shortcuts")} className={`w-10 bg-indigo-200 p-2 ${currentView == "shortcuts" ? "opacity-100" : "opacity-70"}`}>
 		<Image width={32} height={32} src="/images/web.svg" alt="Web" />
 		</button>
-		<button
-		className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem]"
-		onClick={toggleLayout}
-		>
-		<div
-		className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${layoutButtonImage}`}
-		style={{ transform: `translateX(${layoutTranslateX})` }}
-		></div>
-		</button>
-
 		</div>
 		</div>
 		</div>
 
 		<div className="flex items-center justify-end md:px-12">
-		<button className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem]" onClick={changeTheme}>
-		<div className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${isAnime ? buttonImage : "bg-black"}`} style={{ transform: `translateX(${translateX})` }}></div>
-		</button>
+<div className="flex flex-col items-end md:px-12 leading-none">
+  <button
+    className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem] h-[3rem]"
+    onClick={toggleLayout}
+  >
+    <div
+      className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${layoutButtonImage}`}
+      style={{ transform: `translateX(${layoutTranslateX})` }}
+    ></div>
+  </button>
+
+  <button
+    className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem] h-[3rem]"
+    onClick={changeTheme}
+  >
+    <div
+      className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${isAnime ? buttonImage : "bg-black"}`}
+      style={{ transform: `translateX(${translateX})` }}
+    ></div>
+  </button>
+</div>
 		</div>
 		</div>
 
