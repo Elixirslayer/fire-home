@@ -62,7 +62,7 @@ export default function Home() {
 	useEffect(monitorMinScreenSize, [currentView])
 
 	return (
-		<div className={`w-full flex flex-col items-center p-8 bg-cover bg-center ${isAnime ? backgroundImage : "bg-black"}`}>
+		<div className={`w-full min-h-svh flex flex-col items-center p-8 bg-cover bg-center ${isAnime ? backgroundImage : "bg-black"}`}>
 			<div className="m-2 mb-16 w-full flex justify-evenly">
 				<div className="w-1/3 flex items-center">
 					<div className="rounded-3xl overflow-clip">
@@ -80,7 +80,8 @@ export default function Home() {
 					</button>
 				</div>
 			</div>
-			<div id="content-div" className="flex max-w-screen-2xl min-h-svh flex-wrap justify-center">
+			<div className="flex-1 w-full flex items-center justify-center">
+			<div id="content-div" className="mx-auto flex w-full max-w-screen-2xl flex-wrap justify-center">
 				{currentView == "shortcuts" &&
 					sites.map((site) => {
 						return (
@@ -91,6 +92,7 @@ export default function Home() {
 					})}
 
 				{currentView == "tools" && <ToolsWrapper />}
+			</div>
 			</div>
 		</div>
 	);
