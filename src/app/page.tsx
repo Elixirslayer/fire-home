@@ -88,8 +88,8 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="w-full flex flex-col md:flex-row">
-					<div id="left-content-div" className="flex max-w-screen-2xl flex-wrap justify-center">
+				<div className="w-full flex flex-col md:flex-row md:items-center min-h-[60vh]">
+					<div id="left-content-div" className="flex max-w-screen-2xl flex-wrap justify-center items-center">
 						{currentView == "shortcuts" &&
 							leftSites.map((site) => {
 								return (
