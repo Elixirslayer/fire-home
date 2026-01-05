@@ -21,29 +21,17 @@ export const sites: SiteData[] = [
     //             Title: "Jellyseerr",
 				// RedirectUrl: "https://jsr.bankaitab.space/"
     //         },
-    //         {
-    //             ImageUrl: "/images/gotify.png",
-    //             Title: "Gotify",
-				// RedirectUrl: "https://bankaitab.space/gotify/",
-				// Height: 150,
-				// Width: 224
-    //         },
-    //         {
-    //             ImageUrl: "/images/gitlab.png",
-    //             Title: "GitLab",
-				// RedirectUrl: "https://gitlab.com",
-				// Height: 150,
-				// Width: 224
-    //         },
             {
                 ImageUrl: "/images/searxng.png",
                 Title: "SearXNG",
 				RedirectUrl: "https://bankaitab.space/searxng"
             },
             {
-                ImageUrl: "/images/jellyfin.png",
-                Title: "Jellyfin",
-				RedirectUrl: "https://bankaitab.space/jellyfin/web/#/home.html"
+                ImageUrl: "/images/gotify.png",
+                Title: "Gotify",
+				RedirectUrl: "https://bankaitab.space/gotify/",
+				Height: 150,
+				Width: 224
             },
             {
                 ImageUrl: "/images/qbt.png",
@@ -51,18 +39,30 @@ export const sites: SiteData[] = [
 				RedirectUrl: "http://bankaitab.space/qbt"
             },
             {
+                ImageUrl: "/images/gitlab.png",
+                Title: "GitLab",
+				RedirectUrl: "https://gitlab.com",
+				Height: 150,
+				Width: 224
+            },
+            {
                 ImageUrl: "/images/abs.png",
                 Title: "AudioBookShelf",
 				RedirectUrl: "https://abs.bankaitab.space"
             },
             {
-                ImageUrl: "/images/copyparty.svg",
-                Title: "CopyParty",
-				RedirectUrl: "https://copyparty.bankaitab.space"
+                ImageUrl: "/images/jellyfin.png",
+                Title: "Jellyfin",
+				RedirectUrl: "https://bankaitab.space/jellyfin/web/#/home.html"
             },
             {
                 ImageUrl: "/images/Miniflux.png",
                 Title: "Miniflux",
 				RedirectUrl: "https://bankaitab.space/rss"
+            },
+            {
+                ImageUrl: "/images/copyparty.svg",
+                Title: "CopyParty",
+				RedirectUrl: "https://copyparty.bankaitab.space"
             },
 ];
