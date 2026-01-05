@@ -65,9 +65,8 @@ export default function Home() {
 
 	return (
 		<div className={`w-full min-h-svh flex flex-col items-center p-8 bg-cover bg-center ${isAnime ? backgroundImage : "bg-black"}`}>
-			<div className="m-2 mb-16 w-full flex">
-				<div className="w-1/3 flex items-center">
-					<div className="rounded-3xl overflow-clip">
+			<div className="w-full h-full overflow-y-scroll overflow-x-clip flex flex-col items-center p-8">
+				<div className="gap-x-4 md:gap-0 m-2 mb-16 w-full flex items-center flex-wrap md:flex-nowrap justify-between px-6 md:px-0">
 
 						<div className="flex w-full md:w-max justify-between md:justify-normal">
 						<div className="flex items-center">
@@ -88,7 +87,6 @@ export default function Home() {
 						</button>
 					</div>
 				</div>
-			</div>
 
 				<div className="w-full flex flex-col md:flex-row">
 					<div id="left-content-div" className="flex max-w-screen-2xl flex-wrap justify-center">
@@ -103,7 +101,7 @@ export default function Home() {
 						{currentView == "tools" && <ToolsWrapper />}
 					</div>
 					
-						<div className="hidden md:block w-[25%]"></div>
+						<div className="hidden md:block w-1/3"></div>
 
 					<div id="right-content-div" className="flex max-w-screen-2xl flex-wrap justify-center">
 						{currentView == "shortcuts" &&
