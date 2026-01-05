@@ -13,8 +13,11 @@ export default function Home() {
 	const [currentView, setCurrentView] = useState<ViewType>("shortcuts");
 	const [minScreenHeight, setMinScreenHeight] = useState<number>(0);
 	const [isAnime, setIsAnime] = useState<boolean>(false);
+	const [isSplitLayout, setIsSplitLayout] = useState<boolean>(true);
 	const [translateX, setTranslateX] = useState<string>("0px");
+	const [layoutTranslateX, setLayoutTranslateX] = useState<string>("0px");
 	const buttonImage = getSliderImage();
+	const layoutButtonImage = getLayoutSliderImage();
 	const backgroundImage = getBackgroundImage();
 
 	function changeTheme() {
@@ -27,12 +30,23 @@ export default function Home() {
 		return "bg-[url(/images/ichigo.jpg)]";
 	}
 
+	function getLayoutSliderImage(): string {
+  		return "bg-[url(/images/captain-shinsui-kyoraku.png)]";
+	}
+
+
 	function getBackgroundImage(): string {
 		return "bg-[url(/images/gotei-4k.jpg)]";
 	}
 
 	function changeCurrentView(view: ViewType) {
 		setCurrentView(view);
+	}
+	
+	function toggleLayout() {
+ 		localStorage.setItem("isSplitLayout", JSON.stringify(!isSplitLayout));
+ 		setLayoutTranslateX(!isSplitLayout ? "2.5rem" : "0px");
+ 		setIsSplitLayout(!isSplitLayout);
 	}
 
 	function monitorMinScreenSize(){
@@ -61,6 +75,15 @@ export default function Home() {
 		}
 	}, []);
 
+useEffect(() => {
+  const persisted = localStorage.getItem("isSplitLayout");
+  if (persisted) {
+    const parsed = JSON.parse(persisted);
+    setIsSplitLayout(parsed);
+    setLayoutTranslateX(parsed ? "2.5rem" : "0px");
+  }
+}, []);
+
 	useEffect(monitorMinScreenSize, [currentView])
 
 	return (
@@ -77,7 +100,17 @@ export default function Home() {
 								<button onClick={() => changeCurrentView("shortcuts")} className={`w-10 bg-indigo-200 p-2 ${currentView == "shortcuts" ? "opacity-100" : "opacity-70"}`}>
 									<Image width={32} height={32} src="/images/web.svg" alt="Web" />
 								</button>
-							</div>
+<button
+  className="rounded-full bg-zinc-50 text-black p-1 w-[5.5rem]"
+  onClick={toggleLayout}
+>
+  <div
+    className={`rounded-[5rem] w-10 h-10 transition-all duration-150 bg-cover bg-center ${layoutButtonImage}`}
+    style={{ transform: `translateX(${layoutTranslateX})` }}
+  ></div>
+</button>
+
+								</div>
 						</div>
 					</div>
 
@@ -88,33 +121,44 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="w-full flex flex-col md:flex-row md:items-center min-h-[60vh]">
-					<div id="left-content-div" className="flex max-w-screen-2xl flex-wrap justify-center items-center">
-						{currentView == "shortcuts" &&
-							leftSites.map((site) => {
-								return (
-									<div key={site.Title} className="m-4">
-										<SiteComponent siteData={site}></SiteComponent>
-									</div>
-								);
-							})}
-						{currentView == "tools" && <ToolsWrapper />}
-					</div>
-					
-						<div className="hidden md:block w-1/3"></div>
+{isSplitLayout ? (
+  <div className="w-full flex flex-col md:flex-row md:items-center min-h-[60vh]">
+    <div id="left-content-div" className="flex max-w-screen-2xl flex-wrap justify-center items-center">
+      {currentView == "shortcuts" &&
+        leftSites.map(site => (
+          <div key={site.Title} className="m-4">
+            <SiteComponent siteData={site} />
+          </div>
+        ))}
+      {currentView == "tools" && <ToolsWrapper />}
+    </div>
 
-					<div id="right-content-div" className="flex max-w-screen-2xl flex-wrap justify-center">
-						{currentView == "shortcuts" &&
-							rightSites.map((site) => {
-								return (
-									<div key={site.Title} className="m-4">
-										<SiteComponent siteData={site}></SiteComponent>
-									</div>
-								);
-							})}
-						{currentView == "tools" && <ToolsWrapper />}
-					</div>
-				</div>
+    <div className="hidden md:block w-1/3"></div>
+
+    <div id="right-content-div" className="flex max-w-screen-2xl flex-wrap justify-center items-center">
+      {currentView == "shortcuts" &&
+        rightSites.map(site => (
+          <div key={site.Title} className="m-4">
+            <SiteComponent siteData={site} />
+          </div>
+        ))}
+      {currentView == "tools" && <ToolsWrapper />}
+    </div>
+  </div>
+) : (
+  <div className="flex-1 w-full flex items-center justify-center">
+    <div id="content-div" className="mx-auto flex w-full max-w-screen-2xl flex-wrap justify-center">
+      {currentView == "shortcuts" &&
+        sites.map(site => (
+          <div key={site.Title} className="m-4">
+            <SiteComponent siteData={site} />
+          </div>
+        ))}
+      {currentView == "tools" && <ToolsWrapper />}
+    </div>
+  </div>
+)}
+
 			</div>
 		</div>
 	);
